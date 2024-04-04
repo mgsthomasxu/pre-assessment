@@ -32,7 +32,7 @@ while True:
             items = combos[combo_name]
             item_details = "\n".join([f"{item}: ${price}" for item, price in items.items()])
             total_price = calculate_total_price(items)
-            easygui.msgbox(f"{combo_name} Details:\n{item_details}\nTotal Price: ${total_price}")
+            easygui.msgbox(f"{combo_name} Details:\n{item_details}")
         else:
             easygui.msgbox(f"Combo '{combo_name}' not found!")
 
@@ -49,8 +49,6 @@ while True:
             message += f"{combo_name}:\n"
             for item, price in items.items():
                 message += f"    - {item}: ${price}\n"
-            total_price = calculate_total_price(items)
-            message += f"Total Price: ${total_price}\n\n"
         easygui.msgbox(message, title="Combo Meals")
 
     elif choice == "Exit":
