@@ -3,7 +3,6 @@ import easygui
 combos = {"Value Meal": {"Beef burger": 5.69, "Fries": 1.00, "Fizzy drink": 1.00}, 
           "Cheezy Meal": {"Cheeseburger": 6.69, "Fries": 1.00, "Fizzy drink": 1.00}, 
           "Super Meal": {"Cheeseburger": 6.69, "Large fries": 2.00, "Smoothie": 2.00}}
-
 def get_valid_price(prompt):
     while True:
         price_str = easygui.enterbox(prompt) if (price_str := easygui.enterbox(prompt)) is not None and price_str.isnumeric() else None
