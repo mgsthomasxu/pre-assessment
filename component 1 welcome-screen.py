@@ -1,6 +1,5 @@
 ###component 1 welcome-screen
 
-
 #bring in easygui
 import easygui
 
