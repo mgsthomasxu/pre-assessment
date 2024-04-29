@@ -8,14 +8,12 @@ combos = {
     "Super Meal": {"Cheeseburger": 6.69, "Large fries": 2.00, "Smoothie": 2.00}
 }
 
-# Initialize the loop variable to 0
-choices = 0
+# Initialize the loop variable to None
+choices = None
 
-#Loop to keep the program running until the user chooses to exit
-while choices != "Exit":
-    # Prompt user for their choice each iteration
 #Main Menu
-    choices = easygui.buttonbox("What would you like to do?", choices=["Add combo", "Find combo", "Delete combo", "Output all", "Exit"], title="MENU MAKER OPTIONS")
+choices = easygui.buttonbox("What would you like to do?", 
+                                choices=["Add combo", "Find combo", "Delete combo", "Output all", "Exit"], title="MENU MAKER OPTIONS")
 
 
 #loop to keep the program running until the user chooses to exit
@@ -63,6 +61,8 @@ while True:
     elif choices == "Output all":
         easygui.msgbox("\n".join([f"{combo_name}:\n" +"\n".join([f"    - {item}: ${price}" for item, price in items.items()])
                 for combo_name, items in combos.items()]))
-    elif choices == "Exit":
-        break
-
+        
+#Loop to keep the program running until the user chooses to exit
+while choices == "Exit":
+    break
+    # Prompt user for their choice each iteration

@@ -9,17 +9,12 @@ combos = {
 }
 
 
+#Main Menu
+choices = easygui.buttonbox("What would you like to do?", choices=["Add combo", "Find combo", "Delete combo", "Output all", "Exit"], title="MENU MAKER OPTIONS")
 
-
-#Initialize the loop variable to None
-choices = 0
-
-# Loop to keep the program running until the user chooses to exit
-while choices != "Exit":
-    #Main Menu
-    choices = easygui.buttonbox("What would you like to do?", choices=["Add combo", "Find combo", "Delete combo", "Output all", "Exit"], title="MENU MAKER OPTIONS")
 
 #loop to keep the program running until the user chooses to exit
+while True:
     if choices == "Add combo":
         combo_name = easygui.enterbox("Enter combo name:")
         #If a name is provided, continue
